@@ -1,13 +1,19 @@
 # parse-email
 
+This project will create a server with five routes, namely: GetAll, GetById, Create, Update and Delete, which must be executed with the informed token. In addition, every hour it executes a command to check emails that have not filled in the body column. The application runs with Docker, Docker Compose and contains a container for nginx.
+
 ## Installing
 
 Run
 
 ```sh {"id":"01J5VBFFC445JCBYXA3FH3GWTP"}
+apt update -y
+apt install -y docker.io docker-compose make
 docker-compose up -d
 make install
-# make remigrate
+sleep 30
+make remigrate
+make schedule
 ```
 
 ## Token

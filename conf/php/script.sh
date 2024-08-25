@@ -11,5 +11,5 @@ php artisan migrate
 php artisan db:seed
 php artisan schedule:work &
 
-# tail -f /dev/null
+tail -f /dev/null
 # tail -f /dev/stderr
