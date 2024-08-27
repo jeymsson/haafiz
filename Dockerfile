@@ -33,6 +33,8 @@ COPY ./conf/php/script.sh /tmp/entrypoint.sh
 
 RUN chmod +x /tmp/entrypoint.sh
 
+# RUN apt-get install -y default-mysql-client iputils-ping
+
 USER user_application
 
 EXPOSE 9000
